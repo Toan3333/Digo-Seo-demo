@@ -56,3 +56,8 @@ const activeClass = "is-show";
 toggle.addEventListener("click", function () {
   menu.classList.toggle(activeClass);
 });
+
+window.addEventListener("scroll", function () {
+  var header = this.document.querySelector(".header");
+  header.classList.toggle("header-sticky", window.scrollY > 0);
+});

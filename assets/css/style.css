@@ -138,6 +138,13 @@ body {
   margin-bottom: 12rem;
   position: relative;
   z-index: 10;
+  transition: 0.3s linear;
+}
+.header-sticky {
+  background-color: #fdfdfd;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
 }
 .header-left {
   display: flex;
