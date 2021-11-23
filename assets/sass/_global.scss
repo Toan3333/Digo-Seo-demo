@@ -1,0 +1,123 @@
+.container {
+  max-width: 117rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  background-color: $orange;
+  padding: 1.7rem 3.2rem;
+  border-radius: 2.7rem;
+  box-shadow: 0 10px 10px 0 rgb(247 154 47 / 15%);
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: $orange;
+  color: $white;
+  text-transform: uppercase;
+
+  &-primary {
+    background-image: linear-gradient(
+      300deg,
+      #ff5800,
+      #f79056,
+      #ff5800
+    ) !important;
+    border-style: solid;
+    box-shadow: 0 10px 10px 0 rgb(247 154 47 / 15%);
+  }
+
+  span {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    text-transform: none;
+
+    i {
+      margin-left: 1rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+.button-watch {
+  margin-left: 2rem;
+  width: 6.3rem;
+  height: 6.3rem;
+  border-radius: 100%;
+  background-color: $blue;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 2.2rem;
+    color: $white;
+  }
+}
+
+.service-title {
+  font-size: 2rem;
+  color: $black;
+  margin-bottom: 1.5rem;
+}
+
+.heading-title {
+  font-size: 1.4rem;
+  color: $blue;
+  font-weight: 800;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+
+.heading-title-text {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 3.8rem;
+  margin-bottom: 2rem;
+  color: $black;
+}
+
+.swiper-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 1rem;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 99999999;
+}
+
+.swiper-pagination {
+  z-index: 99999999;
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+  transform: scale(1);
+  background-color: $orange;
+}
+
+.pagination
+  .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -4rem;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1279px) {
+  .btn {
+    padding: 1.7rem 3.2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}

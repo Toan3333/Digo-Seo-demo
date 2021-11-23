@@ -1,0 +1,53 @@
+.testimonial {
+  padding: 10rem 0;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &-slider {
+    padding: 5rem 0;
+  }
+
+  &-content {
+    max-width: 56rem;
+    width: 100%;
+  }
+
+  &-image {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-desc {
+    line-height: 2.6rem;
+    font-size: 1.8rem;
+    font-family: $font-Rubik;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    i {
+      color: #d54b4b;
+      font-size: 3.8rem;
+    }
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    color: $black;
+    font-weight: 700;
+  }
+
+  &-address {
+    font-weight: 600;
+    line-height: 2rem;
+  }
+}

@@ -1,0 +1,67 @@
+.sub {
+  background-color: #f8fbfc;
+  padding: 10rem 0;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &-image {
+    max-width: 56rem;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    background-color: $white;
+    border-radius: 2.7rem;
+    padding: 6rem;
+    box-shadow: 8px 8px 30px 0 rgb(42 67 113 / 15%);
+  }
+
+  &-desc {
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    font-family: $font-Rubik;
+    font-weight: 400;
+    line-height: 2.6rem;
+  }
+
+  &-form {
+    margin-top: 2rem;
+    input {
+      width: 100%;
+      padding: 1rem 0;
+      border-style: solid;
+      border-width: 0 0 1px;
+      border-color: #c0baf6;
+
+      &::placeholder {
+        color: $grey;
+        font-weight: 700;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  &-btn {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sub {
+    padding: 5rem 0;
+  }
+  .sub-list {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+}

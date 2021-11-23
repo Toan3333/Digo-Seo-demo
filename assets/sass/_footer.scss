@@ -1,0 +1,139 @@
+.footer {
+  background-image: url(../img/footer-bg-right-1.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding-top: 15rem;
+  position: relative;
+
+  &-bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/footer-bg-left-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-logo {
+    margin-bottom: 3rem;
+  }
+
+  &-heading {
+    font-size: 1.8rem;
+    color: $black;
+    font-weight: 800;
+    line-height: 2.7rem;
+    margin-bottom: 3rem;
+  }
+
+  &-address {
+    margin-bottom: 1.5rem;
+    span {
+      font-family: $font-Rubik;
+      display: flex;
+      line-height: 2.6rem;
+
+      i {
+        margin-right: 0.8rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &-item {
+    font-family: $font-Rubik;
+    font-weight: 400;
+    line-height: 1.95rem;
+    margin-bottom: 1.8rem;
+  }
+
+  &-column:nth-child(1) {
+    padding: 2rem 3.5rem 0 0;
+  }
+
+  &-column:nth-child(2) {
+    padding: 3.5rem 3rem 0;
+  }
+
+  &-column:nth-child(3) {
+    padding: 3.5rem 0rem 0 10rem;
+  }
+
+  &-column:nth-child(4) {
+    padding: 3.5rem 0rem 0 10rem;
+  }
+
+  &-bottom {
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  &-main {
+    border-top: 0.1rem solid $black;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-text {
+    font-family: $font-Rubik;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &-social {
+    a {
+      color: $grey;
+      margin: 0 0.8rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .footer-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-column {
+    margin-bottom: 3rem;
+  }
+  .footer-column:nth-child(2) {
+    padding: 0;
+  }
+
+  .footer-column:nth-child(3) {
+    padding: 0;
+  }
+
+  .footer-column:nth-child(4) {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-text {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+}
