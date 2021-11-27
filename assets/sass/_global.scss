@@ -165,3 +165,20 @@
     padding-top: 1rem;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .question-label {
+    position: relative;
+    font-size: 1.7rem;
+    color: $black;
+
+    &:before {
+      position: absolute;
+      content: "+";
+      top: 50%;
+      right: 0rem;
+      font-size: 2.2rem;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -65,10 +65,6 @@ for (i = 0; i < accordion.length; i++) {
   });
 }
 
-accordion.addEventListener("click", function () {
-  accordionText.classList.toggle("active");
-});
-
 toggle.addEventListener("click", function () {
   menu.classList.toggle(activeClass);
 });

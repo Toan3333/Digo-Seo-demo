@@ -166,6 +166,21 @@ html {
   padding-top: 1rem;
 }
 
+@media screen and (max-width: 767px) {
+  .question-label {
+    position: relative;
+    font-size: 1.7rem;
+    color: #444444;
+  }
+  .question-label:before {
+    position: absolute;
+    content: "+";
+    top: 50%;
+    right: 0rem;
+    font-size: 2.2rem;
+    transform: translateY(-50%);
+  }
+}
 body {
   font-family: "Nunito", sans-serif;
   font-size: 1.6rem;
@@ -179,7 +194,7 @@ body {
   padding: 0.8rem 3rem;
   margin-bottom: 12rem;
   position: relative;
-  z-index: 10;
+  z-index: 100000000000;
   transition: 0.3s linear;
 }
 .header-sticky {
