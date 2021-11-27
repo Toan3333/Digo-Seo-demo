@@ -52,9 +52,33 @@ var swiper = new Swiper(".our-slider", {
 const toggle = document.querySelector(".header-bar");
 const menu = document.querySelector(".header-navbar-menu");
 const activeClass = "is-show";
+const quoteForm = document.querySelector(".get-container-quote");
+const quoteBtn = document.querySelector(".header-btn");
+const closeBtn = document.querySelector(".get-close");
+const showClass = "show-form";
+const accordion = document.getElementsByClassName("question-boxed");
+const accordionText = document.querySelector(".question-text");
+
+for (i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+}
+
+accordion.addEventListener("click", function () {
+  accordionText.classList.toggle("active");
+});
 
 toggle.addEventListener("click", function () {
   menu.classList.toggle(activeClass);
+});
+
+quoteBtn.addEventListener("click", function () {
+  quoteForm.classList.add(showClass);
+});
+
+closeBtn.addEventListener("click", function () {
+  quoteForm.classList.remove(showClass);
 });
 
 window.addEventListener("scroll", function () {

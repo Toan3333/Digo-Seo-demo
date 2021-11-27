@@ -36,6 +36,11 @@
     color: $black;
     font-weight: 800;
 
+    &:hover {
+      color: $orange;
+      transition: 0.1s linear;
+    }
+
     &.active {
       color: $orange;
     }

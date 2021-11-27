@@ -94,6 +94,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .gallary {
+    padding-top: 5rem;
+  }
   .gallary-list {
     display: flex;
     flex-direction: column;
