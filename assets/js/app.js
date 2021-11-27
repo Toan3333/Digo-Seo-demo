@@ -59,12 +59,6 @@ const showClass = "show-form";
 const accordion = document.getElementsByClassName("question-boxed");
 const accordionText = document.querySelector(".question-text");
 
-for (i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-  });
-}
-
 toggle.addEventListener("click", function () {
   menu.classList.toggle(activeClass);
 });
@@ -81,3 +75,9 @@ window.addEventListener("scroll", function () {
   var header = this.document.querySelector(".header");
   header.classList.toggle("header-sticky", window.scrollY > 0);
 });
+
+for (i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+}
