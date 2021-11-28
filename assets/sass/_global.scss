@@ -3,12 +3,12 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 .btn {
   background-color: $orange;
   padding: 1.7rem 3.2rem;
   border-radius: 2.7rem;
   box-shadow: 0 10px 10px 0 rgb(247 154 47 / 15%);
+
   font-size: 1.7rem;
   font-weight: 700;
   border-style: solid;
@@ -43,6 +43,7 @@
 }
 
 .button-watch {
+  position: relative;
   margin-left: 2rem;
   width: 6.3rem;
   height: 6.3rem;
@@ -51,12 +52,52 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  animation: pulse 2s linear infinite;
 
   i {
     font-size: 2.2rem;
     color: $white;
   }
+
+  &:after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: $blue;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+  &:before {
+    animation: pulesing 2s ease-out infinite;
+  }
+  &:after {
+    animation: pulesing 2s 1s ease-out infinite;
+  }
 }
+
+@keyframes pulesing {
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+// @keyframes pulse {
+//   0% {
+//     box-shadow: 0 0 0 0 rgb(20 195 191 / 29%);
+//   }
+//   40% {
+//     box-shadow: 0 0 0 2.3rem rgb(20 195 191 / 29%);
+//   }
+//   80% {
+//     box-shadow: 0 0 0 2.3rem rgb(20 195 191 / 0.7);
+//   }
+//   100% {
+//     box-shadow: 0 0 0 0rem rgb(20 195 191 / 0.5);
+//   }
+// }
 
 .service-title {
   font-size: 2rem;
@@ -107,6 +148,28 @@
   bottom: -4rem;
   width: 100%;
   height: 100%;
+}
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999999999;
+  background: #000011;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.load-container img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.load-container.fade-out {
+  top: -120%;
 }
 
 @media screen and (max-width: 1279px) {
@@ -166,6 +229,21 @@
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .question-label {
+    font-size: 1.6rem;
+
+    &:before {
+      position: absolute;
+      content: "+";
+      top: 50%;
+      right: 0rem;
+      font-size: 2.2rem;
+      transform: translateY(-50%);
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .question-label {
     position: relative;
@@ -176,6 +254,38 @@
       position: absolute;
       content: "+";
       top: 50%;
+
+      right: 0rem;
+      font-size: 2.2rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  .btn {
+    padding: 1.5rem 3rem;
+  }
+
+  .heading-title {
+    margin-bottom: 1.6rem;
+  }
+
+  .heading-title-text {
+    font-size: 2.5rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .question-label {
+    position: relative;
+    font-size: 1.6rem;
+    color: $black;
+
+    &:before {
+      position: absolute;
+      content: "+";
+      top: 50%;
+
       right: 0rem;
       font-size: 2.2rem;
       transform: translateY(-50%);

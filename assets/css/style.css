@@ -50,6 +50,7 @@ html {
 }
 
 .button-watch {
+  position: relative;
   margin-left: 2rem;
   width: 6.3rem;
   height: 6.3rem;
@@ -58,12 +59,35 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  animation: pulse 2s linear infinite;
 }
 .button-watch i {
   font-size: 2.2rem;
   color: #ffffff;
 }
+.button-watch:after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #14c3bf;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.button-watch:before {
+  animation: pulesing 2s ease-out infinite;
+}
+.button-watch:after {
+  animation: pulesing 2s 1s ease-out infinite;
+}
 
+@keyframes pulesing {
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
 .service-title {
   font-size: 2rem;
   color: #444444;
@@ -111,6 +135,28 @@ html {
   bottom: -4rem;
   width: 100%;
   height: 100%;
+}
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000000000000020;
+  background: #000011;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.load-container img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.load-container.fade-out {
+  top: -120%;
 }
 
 @media screen and (max-width: 1279px) {
@@ -166,10 +212,51 @@ html {
   padding-top: 1rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .question-label {
+    font-size: 1.6rem;
+  }
+  .question-label:before {
+    position: absolute;
+    content: "+";
+    top: 50%;
+    right: 0rem;
+    font-size: 2.2rem;
+    transform: translateY(-50%);
+  }
+}
 @media screen and (max-width: 767px) {
   .question-label {
     position: relative;
     font-size: 1.7rem;
+    color: #444444;
+  }
+  .question-label:before {
+    position: absolute;
+    content: "+";
+    top: 50%;
+    right: 0rem;
+    font-size: 2.2rem;
+    transform: translateY(-50%);
+  }
+
+  .btn {
+    padding: 1.5rem 3rem;
+  }
+
+  .heading-title {
+    margin-bottom: 1.6rem;
+  }
+
+  .heading-title-text {
+    font-size: 2.5rem;
+    margin-bottom: 1.6rem;
+  }
+}
+@media screen and (max-width: 374px) {
+  .question-label {
+    position: relative;
+    font-size: 1.6rem;
     color: #444444;
   }
   .question-label:before {
@@ -194,7 +281,7 @@ body {
   padding: 0.8rem 3rem;
   margin-bottom: 12rem;
   position: relative;
-  z-index: 100000000000;
+  z-index: 1000000000;
   transition: 0.3s linear;
 }
 .header-sticky {
@@ -284,13 +371,20 @@ body {
     left: 0;
   }
 
+  .header-btn {
+    bottom: 2rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 2.4rem;
+  }
+
   .header-list {
     display: block;
+    padding: 1rem 2.5rem;
   }
 
   .header-link {
     display: block;
-    padding: 1rem 2.5rem;
   }
 
   .header-bar {
@@ -300,6 +394,7 @@ body {
 @media screen and (max-width: 767px) {
   .header {
     padding: 1rem 1rem;
+    margin-bottom: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -477,6 +572,10 @@ body {
 @media screen and (max-width: 767px) {
   .hero {
     padding: 16.5rem 0 65.2rem;
+  }
+
+  .hero-heading {
+    font-size: 3.8rem;
   }
 
   .hero-main {
@@ -839,9 +938,34 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .why {
+    padding-bottom: 4rem;
+  }
+
   .why-list {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 374px) {
+  .why-wrap {
+    font-size: 1.4rem;
+  }
+
+  .why-column {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .why-column span {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .why-content {
+    padding: 1.2rem 2rem 0 2rem;
   }
 }
 .experience {
@@ -967,6 +1091,16 @@ body {
   line-height: 2rem;
 }
 
+@media screen and (max-width: 767px) {
+  .testimonial {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .testimonial-desc {
+    font-size: 1.6rem;
+  }
+}
 .brand {
   background-color: #f6fbff;
 }
@@ -1010,6 +1144,21 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1023px) {
+  .our {
+    padding-bottom: 6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .our {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .our-slider {
+    padding-top: 3rem;
+  }
+}
 .sub {
   background-color: #f8fbfc;
   padding: 10rem 0;
@@ -1065,9 +1214,17 @@ body {
   }
 
   .sub-list {
-    gap: 2rem;
+    gap: 0rem;
     display: flex;
     flex-direction: column;
+  }
+
+  .sub-content {
+    padding: 4rem;
+  }
+
+  .sub-desc {
+    font-size: 1.6rem;
   }
 }
 .question {
@@ -1097,6 +1254,10 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .question {
+    padding-top: 4rem;
+  }
+
   .question-list {
     display: flex;
     flex-direction: column;
@@ -1150,9 +1311,11 @@ body {
 
 @media screen and (max-width: 1023px) {
   .check-form {
-    padding-right: 0;
-    padding-left: 1rem;
+    padding: 5rem 5rem 3rem;
+    box-shadow: 0 10px 10px 0 rgba(161, 104, 39, 0.4);
     gap: 2rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .check-title {
@@ -1291,6 +1454,23 @@ body {
     font-weight: 400;
     margin-bottom: 1rem;
     font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 374px) {
+  .footer-column {
+    margin-bottom: 2rem;
+  }
+
+  .footer-heading {
+    margin-bottom: 1.6rem;
+  }
+
+  .footer-text {
+    font-size: 1.4rem;
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
   }
 }
 

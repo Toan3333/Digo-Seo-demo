@@ -42,3 +42,19 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 1023px) {
+  .our {
+    padding-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .our-slider {
+    padding-top: 3rem;
+  }
+}

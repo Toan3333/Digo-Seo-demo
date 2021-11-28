@@ -80,8 +80,31 @@
 }
 
 @media screen and (max-width: 767px) {
+  .why {
+    padding-bottom: 4rem;
+  }
   .why-list {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .why-wrap {
+    font-size: 1.4rem;
+  }
+  .why-column {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    span {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+  .why-content {
+    padding: 1.2rem 2rem 0 2rem;
   }
 }

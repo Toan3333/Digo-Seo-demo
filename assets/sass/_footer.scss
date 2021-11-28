@@ -137,3 +137,18 @@
     font-size: 1.6rem;
   }
 }
+
+@media screen and (max-width: 374px) {
+  .footer-column {
+    margin-bottom: 2rem;
+  }
+  .footer-heading {
+    margin-bottom: 1.6rem;
+  }
+  .footer-text {
+    font-size: 1.4rem;
+  }
+  .footer-bottom {
+    margin-top: 2rem;
+  }
+}

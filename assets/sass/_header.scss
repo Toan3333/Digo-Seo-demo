@@ -5,7 +5,7 @@
   padding: 0.8rem 3rem;
   margin-bottom: 12rem;
   position: relative;
-  z-index: 100000000000;
+  z-index: 1000000000;
   transition: 0.3s linear;
 
   &-sticky {
@@ -107,13 +107,20 @@
     }
   }
 
+  .header-btn {
+    bottom: 2rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 2.4rem;
+  }
+
   .header-list {
     display: block;
+    padding: 1rem 2.5rem;
   }
 
   .header-link {
     display: block;
-    padding: 1rem 2.5rem;
   }
 
   .header-bar {
@@ -124,6 +131,7 @@
 @media screen and (max-width: 767px) {
   .header {
     padding: 1rem 1rem;
+    margin-bottom: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

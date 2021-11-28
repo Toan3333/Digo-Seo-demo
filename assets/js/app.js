@@ -81,3 +81,13 @@ for (i = 0; i < accordion.length; i++) {
     this.classList.toggle("active");
   });
 }
+
+function loader() {
+  document.querySelector(".load-container").classList.add("fade-out");
+}
+
+function fadeOut() {
+  setInterval(loader, 3000);
+}
+
+window.onload = fadeOut();

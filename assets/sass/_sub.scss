@@ -60,8 +60,16 @@
     padding: 5rem 0;
   }
   .sub-list {
-    gap: 2rem;
+    gap: 0rem;
     display: flex;
     flex-direction: column;
+  }
+
+  .sub-content {
+    padding: 4rem;
+  }
+
+  .sub-desc {
+    font-size: 1.6rem;
   }
 }
